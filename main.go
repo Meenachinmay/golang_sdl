@@ -82,7 +82,7 @@ func (g *game) run() {
 		g.handleEvents()
 		g.update()
 		g.render()
-		sdl.Delay(16) // Roughly 60 frames per second
+		sdl.Delay(20) // Roughly 60 frames per second
 	}
 
 	g.cleanup()
@@ -104,6 +104,17 @@ func (g *game) handleEvents() {
 					g.boxX -= 10
 				case sdl.K_d:
 					g.boxX += 10
+				case sdl.K_DOWN:
+					g.boxY += 10
+				case sdl.K_UP:
+					g.boxY -= 10
+				case sdl.K_LEFT:
+					g.boxX -= 10
+				case sdl.K_RIGHT:
+					g.boxX += 10
+				case sdl.K_ESCAPE:
+					g.running = false
+					sdl.Quit()
 				}
 			}
 		}
