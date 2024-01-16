@@ -1,4 +1,4 @@
-module project/game/main
+module github.com/meenachinmay/golang_sdl
 
 go 1.21.5
 
