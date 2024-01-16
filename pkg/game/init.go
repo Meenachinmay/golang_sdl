@@ -2,6 +2,7 @@
 package main
 
 import "github.com/veandco/go-sdl2/sdl"
+import "github.com/meenachinmay/golang_sdl/pkg/utils"
 
 func NewGame() (*Game, error) {
     // Initialization logic from your original newGame function

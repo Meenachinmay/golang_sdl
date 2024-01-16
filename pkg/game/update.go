@@ -2,7 +2,7 @@
 package main
 
 import (
-    "github.com/meenachinmay/golang_sdl/pkg/utils/constants"
+    "github.com/meenachinmay/golang_sdl/pkg/utils"
 )
 
 func (g *Game) update(deltaTime float32) {
