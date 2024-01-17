@@ -1,2 +1,73 @@
-main
-go.sum
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+*.dylib
+
+# Folders
+/vendor/
+/node_modules/
+
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+# Binaries
+/bin/
+/pkg/
+
+# Output of the go coverage tool
+*.cover
+
+# Output directories
+/dist/
+/build/
+
+# Dependency directories
+Godeps/
+
+# Editor files and directories
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Operating System generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# SDL specific ignores
+*.dll
+*.exe
+*.lib
+*.tmp
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Other common ignores
+*.tar.gz
+*.zip
+*.rar
+*.gz
+
+# Executable
+/yourprojectname  # Replace with your actual binary name
+
+# Configuration files
+*.yaml
+*.yml
+*.json
+*.xml
+
+# Certificates
+*.pem
+*.crt
+*.key
