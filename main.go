@@ -1,6 +1,4 @@
-// main.go
 package main
-
 
 func main() {
 	g, err := NewGame()

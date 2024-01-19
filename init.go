@@ -1,4 +1,3 @@
-// init.go
 package main
 
 import "github.com/veandco/go-sdl2/sdl"
@@ -19,5 +18,17 @@ func NewGame() (*Game, error) {
 		return nil, err
 	}
 
-	return &Game{window: window, renderer: renderer, running: true, boxX: float32(windowWidth) / 2, boxY: float32(windowHeight) / 2}, nil
+	game := &Game{
+        window: window,
+        renderer: renderer,
+        running: true,
+        players: []*Entity{
+            NewEntity(float32(windowWidth)/2, float32(windowHeight)/2, 0, 0, sdl.Color{R: 255, G: 255, B: 255, A: 255}),
+        },
+		enemies: []*Entity{
+            NewEntity(100, 100, 0, 0, sdl.Color{R: 255, G: 0, B: 0, A: 255}), // Red enemy
+        },
+    }
+
+    return game, nil
 }
