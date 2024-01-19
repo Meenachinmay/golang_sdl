@@ -7,6 +7,8 @@ type Entity struct {
 	X, Y       float32
 	VelX, VelY float32
 	Color      sdl.Color
+	Texture    *sdl.Texture
+	Angle      float64
 }
 
 func NewEntity(x, y, velX, velY float32, color sdl.Color) *Entity {
@@ -25,6 +27,6 @@ func (e *Entity) Update(deltaTime float32) {
 }
 
 func (e *Entity) Render(renderer *sdl.Renderer) {
-	renderer.SetDrawColor(e.Color.R, e.Color.G, e.Color.B, e.Color.A)
-	renderer.FillRect(&sdl.Rect{X: int32(e.X), Y: int32(e.Y), W: boxSize, H: boxSize})
+	rect := &sdl.Rect{X: int32(e.X), Y: int32(e.Y), W: boxSize, H: boxSize}
+	renderer.CopyEx(e.Texture, nil, rect, e.Angle, nil, sdl.FLIP_NONE)
 }

@@ -6,5 +6,5 @@ const (
 	windowHeight = 600
 	boxSize      = 50
 	targetFPS    = 60
-	boxSpeed     = 1000 // pixels per second
+	boxSpeed     = 100 // pixels per second
 )
